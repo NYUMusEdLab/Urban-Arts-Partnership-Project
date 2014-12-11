@@ -1,23 +1,54 @@
 <h1> <%= @song.title %> </h1>
 
-
+<section class="lyrics">
 <h1>Lyrics</h1>
 
 <% @song.lyrics.each do |lyric| %>  
 
-<p data-lyric = <%= lyric.id%> data-info = <%= lyric.info %>> <%= lyric.content %></p>
+<p data-lyric = <%= lyric.id%> data-info = <%= lyric.info %> style="white-space: pre-wrap;"> <span ><%= lyric.content %><span></p>
 
 
 <% end %>
+</section>
+
+<section class="information">
+
 
 <% @lyrics_with_definitions.each do |lyric| %> 
 
 <section data-definition = <%= lyric.id %>>
 
+
+<img style="width:200px"src="http://www.urbanarts.org/wp-content/themes/urbanarts/img/uap_logo.png">
 <h1>Definition</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum volutpat massa vel egestas. Donec ullamcorper odio ac dapibus interdum. Donec pulvinar, velit condimentum ullamcorper vulputate, augue erat rhoncus ex, quis condimentum ipsum libero eu orci. In facilisis eleifend lacus, in commodo nulla bibendum in. Maecenas nec diam semper, aliquam eros eget, tincidunt quam. Sed ac urna placerat, molestie elit vitae, tempor odio. Praesent quis massa libero. Vivamus a lectus ultricies turpis varius placerat nec in ante. Nam rhoncus metus ac condimentum luctus. Aenean a blandit libero. Maecenas ac libero et justo viverra rhoncus et ac sapien.</p>
+
+<h2>Comments</h2>
+<ul>
+<% lyric.comments.each do |comment| %>
+
+<li> <%= comment.content %> </li>
+
+<% end %>
+
+</ul>
+
 <p><%= lyric.definition %></p>
+
+<%= form_for(@comment) do |f| %>
+<%= f.text_area :content %>
+<input type = "hidden" value = <%= lyric.id %> name= "lyric_id"><br>
+<input type = "hidden" value = <%= @song.id %> name= "song_id"><br>
+<%= f.submit %>
+<% end %>
+
 
 
 </section>
 
+
+
 <% end %>
+
+</section>

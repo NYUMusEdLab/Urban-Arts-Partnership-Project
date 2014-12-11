@@ -2,6 +2,7 @@ class SongsController < ApplicationController
 
   before_action :set_song, only: [:show, :edit]
   def create
+    binding.pry
     song = Song.create(song_params)
     song.create_lyrics(lyric_params)
     redirect_to songs_path
@@ -24,7 +25,8 @@ class SongsController < ApplicationController
 
   def show
     @lyrics_with_definitions = @song.lyrics_with_definitions
-    
+    @comment = Comment.new
+
   end
 
   private
