@@ -13,6 +13,7 @@ $(document).ready(function(){
   })
 
   $('p').on("click","span",function(){
+    $('.info-card').hide();
     var data = $(this).parent().data().lyric
     var show = $(this).parent().data().info
     if (show === true){
