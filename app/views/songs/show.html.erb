@@ -1,1 +1,23 @@
 <h1> <%= @song.title %> </h1>
+
+
+<h1>Lyrics</h1>
+
+<% @song.lyrics.each do |lyric| %>  
+
+<p data-lyric = <%= lyric.id%> data-info = <%= lyric.info %>> <%= lyric.content %></p>
+
+
+<% end %>
+
+<% @lyrics_with_definitions.each do |lyric| %> 
+
+<section data-definition = <%= lyric.id %>>
+
+<h1>Definition</h1>
+<p><%= lyric.definition %></p>
+
+
+</section>
+
+<% end %>

@@ -2,6 +2,10 @@ class SongsController < ApplicationController
 
   before_action :set_song, only: [:show, :edit]
   def create
+    song = Song.create(song_params)
+    song.create_lyrics(lyric_params)
+    redirect_to songs_path
+
   end
 
   def destroy
@@ -19,6 +23,7 @@ class SongsController < ApplicationController
   end
 
   def show
+    @lyrics_with_definitions = @song.lyrics_with_definitions
     
   end
 
@@ -26,8 +31,14 @@ class SongsController < ApplicationController
 
   def set_song
     @song = Song.find(params[:id])
-
   end 
 
+  def song_params
+    params.require(:song).permit(:title)
+  end
+
+  def lyric_params
+    params.require(:lyrics).permit(:content)
+  end
 
 end
