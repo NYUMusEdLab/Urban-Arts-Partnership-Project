@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'rspec-rails'
+gem 'haml'
 gem 'pry'
 gem 'arel', '6.0.0.beta2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
