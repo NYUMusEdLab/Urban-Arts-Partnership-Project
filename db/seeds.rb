@@ -1924,8 +1924,9 @@ song_titles.each_with_index do |song,index|
   new_song.lyrics.create(:content => lyrics[index])
 end
 
-geography.each{|x|
+geography.each do |x|
+ Song.find_by(:title=> "Geography").keywords.create(name: x[:keyword],
+                                                    definition: x[:definition],
+                                                    word_class: x[:word_class])
 
- x[:keyword]
-
-}
+end
