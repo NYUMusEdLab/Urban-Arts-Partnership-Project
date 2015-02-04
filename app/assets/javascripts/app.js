@@ -20,8 +20,6 @@ $(document).ready(function(){
       $('section').filter('[data-definition=' + data + ']').fadeIn()
     }
   })
- 
-  alert("sdf")
 
 
 
