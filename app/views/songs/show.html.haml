@@ -2,10 +2,18 @@
   = @song.title
 %p{style:"white-space: pre;"}
   = @song.lyrics.first.content
-.keyword-card
-  =@song.keywords.each do |x|
+.keywords
+  -@song.keywords.each do |keyword|
+    .keyword-card{:data=>{keywordid:keyword.id - 1}}
+      .keyword-name
+        = "#{keyword.name} (#{keyword.word_class})"
+      .keyword-description
+        = keyword.definition
+      
 
-  
+
+
+
 :javascript
   "#{j @song.keywords.map{|x| x.name }.to_s}"
   

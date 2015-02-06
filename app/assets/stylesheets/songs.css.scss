@@ -19,5 +19,19 @@
 
 .keyword{
   font-weight: bold;
+  &:hover{
+    background:yellow;
+    cursor:pointer;
+  }
+}
+.keyword-card{
+  position:fixed;
+  display:none;
+  width:400px;
+  top: 300px;
+  margin-left: 500px;
+  border:1px solid black;
+  z-index: 99999;
+
 
 }
