@@ -2,6 +2,10 @@
   = @song.title
 %p{style:"white-space: pre;"}
   = @song.lyrics.first.content
+.keyword-card
+  =@song.keywords.each do |x|
+
+  
 :javascript
   "#{j @song.keywords.map{|x| x.name }.to_s}"
   

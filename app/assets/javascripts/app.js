@@ -20,7 +20,14 @@ $(document).ready(function(){
       $('section').filter('[data-definition=' + data + ']').fadeIn()
     }
   })
+  $('p').html($('p').html().replace("Mesopatamia","Mesopotamia"))
+  var keywords = $.parseJSON($('script').last().html()).replace('["',"").replace('"]',"").split('", "')
 
+  keywords.forEach(function(value,index){
+       $('p').html($('p').html().replace(value,"<strong data-keyword-id=" + index + "> "+value+" </strong>"))
+       $('p').html($('p').html().replace(value.toLowerCase(),"<span class='keyword' data-keyword-id=" + index + "> "+value.toLowerCase()+" </span>"))
+  })
+  
 
 
 })
