@@ -3,8 +3,8 @@
 %p{style:"white-space: pre;"}
   = @song.lyrics.first.content
 .keywords
-  -@song.keywords.each do |keyword|
-    .keyword-card{:data=>{keywordid:keyword.id - 1}}
+  -@song.keywords.each_with_index do |keyword,index|
+    .keyword-card{:data=>{keywordid:index }}
       .keyword-name
         = "#{keyword.name} (#{keyword.word_class})"
       .keyword-description

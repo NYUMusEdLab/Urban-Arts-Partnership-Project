@@ -78,8 +78,4 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: uap_production
-  username: uap
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+
