@@ -9,6 +9,11 @@
         = "#{keyword.name} (#{keyword.word_class})"
       .keyword-description
         = keyword.definition
+      .keyword-comments
+        = form_for @comment do |f|
+          = f.text_field, :submit
+          = f.submit
+
     
 
 
