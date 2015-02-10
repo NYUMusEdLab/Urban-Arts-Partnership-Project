@@ -11,8 +11,12 @@
         = keyword.definition
       .keyword-comments
         = form_for @comment do |f|
-          = f.text_field, :submit
+          = f.text_field :content
           = f.submit
+      %ul
+        = keyword.comments.each do |comment|
+          %li 
+            =comment.content
 
     
 
