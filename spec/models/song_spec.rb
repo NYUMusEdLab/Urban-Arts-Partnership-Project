@@ -7,6 +7,6 @@ describe Song do
   end 
 
   it "has many lyrics" do 
-    expect(song).respond_to lyrics
+    expect(song).respond_to "lyrics"
   end
 end
