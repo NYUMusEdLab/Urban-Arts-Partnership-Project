@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
 
   def create
-    song = Song.find(song_params.to_i)
-    lyric = Lyric.find(lyric_params.to_i)
-    lyric.comments.create(comment_params)
-    redirect_to song
+    keyword = Keyword.find(keyword_id.to_i + 1)
+    keyword.comments.create(content:comment_content)
+    render nothing:true
   end
 
   def new
@@ -13,17 +12,17 @@ class CommentsController < ApplicationController
 
   private
 
-  def comment_params
-    params.require(:comment).permit(:content)
+  def comment_content
+    params.require("comment_content")
 
   end 
 
-  def lyric_params
-    params.require(:lyric_id)
+  def keyword_id
+    params.require("keyword_id")
   end
 
-  def song_params
-    params.require(:song_id)
+  def song_id
+    params.require("song_id")
   end
 
 end

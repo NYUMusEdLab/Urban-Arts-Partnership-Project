@@ -1,10 +1,10 @@
-%h1 
+%h1{data: {songId:@song.id}} 
   = @song.title
 %p{style:"white-space: pre;"}
   = @song.lyrics.first.content
 .keywords
   -@song.keywords.each_with_index do |keyword,index|
-    .keyword-card{:data=>{keywordid:index }}
+    .keyword-card{:data=>{keywordid:index,paramid: keyword.id }}
       .keyword-name
         = "#{keyword.name} (#{keyword.word_class})"
       .keyword-description
@@ -12,11 +12,12 @@
       .keyword-comments
         = form_for @comment do |f|
           = f.text_field :content
-          = f.submit
+          = f.submit :class => "comment-submit"
       %ul
-        = keyword.comments.each do |comment|
-          %li 
-            =comment.content
+        - keyword.comments.each do |comment|
+          %li
+            = comment.content
+
 
     
 
