@@ -24,17 +24,19 @@ $(document).ready(function(){
 
   $(".comment-submit").on("click",function(e){
     e.preventDefault()
+    var $this = $(this)
     var songId = $('h1').eq(0).data().songId
     var comment = $(this).parent().find("#comment_content").val();
     var keywordId = $(".comment-submit").eq(1).closest(".keyword-card").data().paramid
-    commentInfo = {comment_content: comment, keyword_id: keywordId, song_id: songId}
+    var commentInfo = {comment_content: comment, keyword_id: keywordId, song_id: songId}
     $.ajax({
       type:"POST",
-      url:'/comments' ,
+      url:'/comments',
+      context: $this,
       data: commentInfo,
       success: function(){
-        $(this).parent().find("#comment_content").val("");
-        
+        $(this).parent().find("#comment_content").val(""); 
+        $(this).closest(".keyword-card").find("ul").append("<li>"+comment+"</li>")
       },
       error: function(){
         alert("Cannot connect to the server.")
