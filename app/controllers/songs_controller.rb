@@ -5,7 +5,6 @@ class SongsController < ApplicationController
     song = Song.create(song_params)
     song.create_lyrics(lyric_params)
     redirect_to songs_path
-
   end
 
   def destroy
@@ -23,9 +22,7 @@ class SongsController < ApplicationController
   end
 
   def show
-    @lyrics_with_definitions = @song.lyrics_with_definitions
     @comment = Comment.new
-
   end
 
   private
