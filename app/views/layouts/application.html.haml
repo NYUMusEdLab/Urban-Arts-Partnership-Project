@@ -6,7 +6,496 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true 
     = csrf_meta_tags
-  %body
+  %body.home
+  #fb-root
+  #page.hfeed.off-canvas.hide-extras
+    .header-full-width
+      .body-top-bar
+      .container
+        %header#branding{:role => "banner"}
+          %nav#menu.top-bar{:role => "navigation"}
+            .title-area
+              %a{:href => "http://www.urbanarts.org/", :rel => "home", :title => "Urban Arts Partnership"}
+                %img{:src => "/wp-content/themes/urbanarts/img/UAP-full-logo.png"}
+            %section.primary-nav
+              .menu-main-menu-container
+                %ul#menu-main-menu.top-bar-section
+                  %li#menu-item-104.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-104
+                    %a{:href => "/students/"} Students
+                  %li#menu-item-103.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-103
+                    %a{:href => "/educators/"} Educators
+                  %li#menu-item-102.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-102
+                    %a{:href => "/programs/"} Programs
+                  %li#menu-item-455.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-455
+                    %a{:href => "/impact-page/"} Impact
+                  %li#menu-item-1461.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1461
+                    %a{:href => "/news-events/"} News &amp; Events
+                  %li#menu-item-189.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-189
+                    %a{:href => "/about/"} About Us
+            #menu-wrapper
+              %a#sidebarButton.sidebar-button.button{:href => "#"}
+                %span MENU
+      %section#main-profiles{:style => "background-color:#380612"}
+        .row
+          #profile-slider.flexslider
+            %ul.slides
+              %li
+                %img{:src => "/wp-content/themes/urbanarts/img/header_mission.jpg"}/
+                #missionText
+                  %h1 Urban Arts Partnership advances the intellectual, social and artistic development of underserved public school students through arts-integrated education programs to close the achievement gap.
+              %li
+                %a{:href => "https://app.mobilecause.com/public/campaigns_keywords/14353/donations/new"}
+                  %img.profile-image{"data-hover-url" => "http://www.urbanarts.org/wp-content/uploads/2014/11/uap-SLIDER_Rosie.jpg", "data-url" => "http://www.urbanarts.org/wp-content/uploads/2014/11/uap-SLIDER_Rosie.jpg", :src => "http://www.urbanarts.org/wp-content/uploads/2014/11/uap-SLIDER_Rosie.jpg"}/
+                %blockquote
+                  %a{:href => "https://app.mobilecause.com/public/campaigns_keywords/14353/donations/new"}
+                    %p
+                      Artistic Board Chair Rosie Perez invites you to support UAP's mission to provide opportunities for students in underserved schools
+                    %hgroup
+                      %h3 Rosie Invites You!
+                      %h4 Donate Here >>
+              %li
+                %a{:href => "http://urbanarts.org/annual-reports/"}
+                  %img.profile-image{"data-hover-url" => "http://www.urbanarts.org/wp-content/uploads/2014/08/uap-SLIDER_AnnualReport3.jpg", "data-url" => "http://www.urbanarts.org/wp-content/uploads/2014/08/uap-SLIDER_AnnualReport3.jpg", :src => "http://www.urbanarts.org/wp-content/uploads/2014/08/uap-SLIDER_AnnualReport3.jpg"}/
+                %blockquote
+                  %a{:href => "http://urbanarts.org/annual-reports/"}
+                    %p
+                      In 2013, Urban Arts Partnership grew its programs and services by more than 100% - reaching more than 12,000 students.
+                      %br/
+                      %br/
+                      Check out our 2013 Annual Report!
+                    %hgroup
+                      %h3 Annual Report 2013
+                      %h4 READ ABOUT OUR IMPACT LAST YEAR
+              %li
+                %a{:href => "http://www.urbanarts.org/profile/devin-mojica/"}
+                  %img.profile-image{"data-hover-url" => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-hero-devin_hover.jpg", "data-url" => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-hero-devin.jpg", :src => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-hero-devin.jpg"}/
+                %blockquote
+                  %a{:href => "http://www.urbanarts.org/profile/devin-mojica/"}
+                    %p
+                      “I want to reach my greatest potential in life... I want to be an example to my nieces and nephews who will see me, and now hopefully think that they too can strive for something greater.“
+                    %hgroup
+                      %h3 Devin Mojica
+                      %h4 UAP Life Stories alumnus and Nagler Scholar
+                  %a{"data-reveal-id" => "video-modal-1", :href => "#"}
+                    .video-block
+                      %img{:src => "http://www.urbanarts.org/wp-content/uploads/2014/02/zeran-video.png"}/
+                      %img.play-button{:src => "/wp-content/themes/urbanarts/img/play-button.png"}/
+              #video-modal-1.reveal-modal.overthrow.video-modal
+                .fitVids
+                  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "281", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/87029910?title=0&amp;byline=0&amp;portrait=0", :webkitallowfullscreen => "", :width => "500"}
+              %li
+                %a{:href => "http://www.urbanarts.org/profile/sarwat-siddiqui/"}
+                  %img.profile-image{"data-hover-url" => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-hero-sarwat_hover.jpg", "data-url" => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-hero-sarwat.jpg", :src => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-hero-sarwat.jpg"}/
+                %blockquote
+                  %a{:href => "http://www.urbanarts.org/profile/sarwat-siddiqui/"}
+                    %p
+                      “I entered UAP as a quiet, shy and insecure 10th grader, reluctant to share my work. But over the years I gained confidence in both my writing and in myself.“
+                    %hgroup
+                      %h3 Sarwat Siddiqui
+                      %h4 UAP Play Writing alumna and Nagler Scholar
+            .circleBox{:style => "display:none"}
+              %a{:href => "https://app.mobilecause.com/public/campaigns_keywords/14353/donations/new"}
+                %ul.ch-grid{:style => "display:none"}
+                  %li
+                    .ch-item
+                      .ch-info
+                        %h1 DONATE TODAY
+                      .ch-info2
+                        %h2
+                          Support Urban Arts Partnership.
+                        %h3 Donate Now
+          .secondary-nav
+            .menu-utility-navigation-container
+              %ul
+                %li
+                  %a{:href => "/partners"} Partners
+                %li
+                  %a.donate-now{:href => "https://app.mobilecause.com/public/campaigns_keywords/14353/donations/new"} Donate Now
+            %a{:href => "https://plus.google.com/+UrbanartsOrg", :target => "_blank"}
+              %img.social-icon.google-plus{:src => "/wp-content/themes/urbanarts/img/\n  googleplus-white.png"}/
+            %a{:href => "https://www.facebook.com/urbanartspartnership", :target => "_blank"}
+              %img.social-icon.facebook{:src => "/wp-content/themes/urbanarts/img/fb-white.png"}/
+            %a{:href => "https://twitter.com/UAPNYC", :target => "_blank"}
+              %img.social-icon.twitter{:src => "/wp-content/themes/urbanarts/img/twitter-white.png"}/
+            %form.search-form.hide-for-medium-down{:action => "http://www.urbanarts.org/", :method => "get", :role => "search"}
+              %input#search{:name => "s", :type => "text", :value => ""}/
+              %input.hide-for-medium-down{:alt => "Search", :src => "/wp-content/themes/urbanarts/img/search-white.png", :type => "image"}/
+    .row
+      #main.container{:role => "main"}
+        %section#mission-block.homepage-block
+          .row
+            %h3
+              UAP serves over
+              %span#totalStudents.odometer 10,000
+              students and
+              %span#totalTeachers.odometer 100
+              teachers in
+              %span#totalSchools.odometer 10
+              under served schools across New York City and Los Angeles.
+          .row
+            .small-4.columns
+              %article
+                %img.icon.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2014/02/uap-illo1.png"}/
+                %h1 Closing the Achievement Gap
+                %p UAP uses the arts to address educational inequity and provide the opportunity for young people to gain the skills and understanding they need to move on to college and career.
+            .small-4.columns
+              %article
+                %img.icon.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2014/02/UAP-illo2.png"}/
+                %h1 Inspiring Public Education
+                %p Our professional development programs give classroom teachers a transformational set of creative approaches, tools and resources to address Common Core learning standards through the arts.
+            .small-4.columns
+              %article
+                %img.icon.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2014/02/UAP-illo3.png"}/
+                %h1 Unlocking Student Potential
+                %p UAP programs ignite curiosity, develop character, and create pathways to success and excellence for students in Kindergarten to 12th Grade.
+      %section#sidebar{:role => "complementary"}
+        %nav#sideMenu{:role => "navigation"}
+          .menu-main-menu-container
+            %ul#menu-main-menu.top-bar-section
+              %li#menu-item-104.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-104
+                %a{:href => "http://www.urbanarts.org/students/"} Students
+              %li#menu-item-103.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-103
+                %a{:href => "http://www.urbanarts.org/educators/"} Educators
+              %li#menu-item-102.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-102
+                %a{:href => "http://www.urbanarts.org/programs/"} Programs
+              %li#menu-item-455.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-455
+                %a{:href => "http://www.urbanarts.org/impact-page/"} Impact
+              %li#menu-item-1461.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1461
+                %a{:href => "http://www.urbanarts.org/news-events/"} News & Events
+              %li#menu-item-4937.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-4937
+                %a{:href => "http://www.urbanarts.org/about/"} About Us
+    %section#annual-events-block.homepage-block
+      %hgroup
+        %h5 Our Annual Events
+      #padded-row.row
+        .small-6.columns
+          %article
+            %a{:href => "/events/category/the-24-hour-plays "}
+              .event-image.fadeIn{:style => "background-image:url(http://www.urbanarts.org/wp-content/uploads/2014/02/24hourplays4.jpg)"}
+            %a{:href => "/events/category/the-24-hour-plays "}
+              %h2 The 24 Hour Plays
+            %p The 24 Hour Plays on Broadway is an annual benefit event produced by the 24 Hour Company and Freestyle Picture Company for Urban Arts Partnership. Every year the the night before the show – a stellar group of six writers, six directors, 24 accomplished actors, two musical guests, and a production staff gather at the American Airlines Theatre. The casts met for the first time at 9 AM and, over the next 12 hours the plays were rehearsed and produced for a live performance at 8:00 PM.
+        .small-6.columns
+          %article
+            %a{:href => "/events/category/uaf2014 "}
+              .event-image.fadeIn{:style => "background-image:url(http://www.urbanarts.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-15-at-6.20.56-PM.png)"}
+            %a{:href => "/events/category/uaf2014 "}
+              %h2 Urban Arts Festival 2014
+            %p Celebrating art, media, &amp; workshops produced by New York City’s Public School students. Each year since 2007, Urban Arts Partnership celebrates exceptional student works and performances from all of our participating schools across New York City, bringing representatives from our city’s diverse neighborhoods together in professional &amp; creative spaces where student work is presented to an audience of educators, local artists, funders, Department of Education representatives, and professionals from a variety of industries, helping to advance our cause of creative expression and innovative education within the greater NYC community.
+    %section#twitter-block.homepage-block
+      .row
+        .large-2.large-offset-1.columns
+          %h6 Latest Tweet:
+        .large-8.columns
+          %article.tweet
+            %div
+              %h2
+                %span.twitterwidget.twitterwidget-title Twitter: UAPNYC
+              %ul
+                %li
+                  %span.entry-content
+                    RT
+                    = succeed ":" do
+                      %a.twitter-user{:href => "http://twitter.com/Shenicao"} @Shenicao
+                    = succeed ":" do
+                      %a.twitter-user{:href => "http://twitter.com/Shenicao"} @Shenicao
+                    How often do educators get to sit on the floor and create? The simple joys of EASE!
+                    %a.twitter-user{:href => "http://twitter.com/UAPNYC"} @UAPNYC
+                    %a{:href => "http://t.co/egLRWDblPl"} http://t.co/egLRWDblPl
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568921341501575168"} about 22 hours ago
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568921341501575168", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568921341501575168", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568921341501575168", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    I posted 10 photos on Facebook in the album "Young Professionals Gallery Night at Damien Hirst's Other Criteri"
+                    %a{:href => "http://t.co/wAUhnCJCPt"} http://t.co/wAUhnCJCPt
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568894567623340032"} 05:06:49 PM February 20, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://www.facebook.com/twitter", :rel => "nofollow"} Facebook
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568894567623340032", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568894567623340032", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568894567623340032", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    UAP at
+                    = succeed "!" do
+                      %a.twitter-hashtag{:href => "http://twitter.com/search?q=%23BSH2015"} #BSH2015
+                    “@Shenicao: Everyday Arts for Special Education: Amazing engagement and fantastic use of space
+                    %a{:href => "http://t.co/j32RGznFKD”"} http://t.co/j32RGznFKD”
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568824753114484736"} 12:29:24 PM February 20, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                    %span.in-reply-to-meta
+                      %a.reply-to{:href => "http://twitter.com/Shenicao/statuses/568814418072621056"} in reply to Shenicao
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568824753114484736", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568824753114484736", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568824753114484736", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    “@Shenicao: EASE is easing into their workshop at beyond school hours national conference
+                    %a{:href => "http://t.co/k1FtdDGc7a”"} http://t.co/k1FtdDGc7a”
+                    %a.twitter-hashtag{:href => "http://twitter.com/search?q=%23BSH2015"} #BSH2015
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568803846211809280"} 11:06:19 AM February 20, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                    %span.in-reply-to-meta
+                      %a.reply-to{:href => "http://twitter.com/Shenicao/statuses/568803688283807744"} in reply to Shenicao
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568803846211809280", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568803846211809280", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568803846211809280", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    Attending this year's Beyond School Hours Conference? Make sure to come find our team!
+                    %a{:href => "http://t.co/pIibfRHpm1"} http://t.co/pIibfRHpm1
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568507383925870592"} 03:28:17 PM February 19, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://www.facebook.com/twitter", :rel => "nofollow"} Facebook
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568507383925870592", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568507383925870592", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568507383925870592", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    Our team sharing what we've learned about Community Schools at the
+                    = succeed "!" do
+                      %a.twitter-hashtag{:href => "http://twitter.com/search?q=%23BSH2015"} #BSH2015
+                    %a.twitter-user{:href => "http://twitter.com/BSHconference"} @BSHconference
+                    %a{:href => "http://t.co/OCqOTJshyA"} http://t.co/OCqOTJshyA
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568506519404339200"} 03:24:51 PM February 19, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568506519404339200", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568506519404339200", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568506519404339200", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    Many thanks to
+                    %a.twitter-user{:href => "http://twitter.com/other_criteria"} @other_criteria
+                    for hosting our Young Professionals Night!
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568238668030152705"} 09:40:30 PM February 18, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568238668030152705", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568238668030152705", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568238668030152705", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    RT
+                    = succeed ":" do
+                      %a.twitter-user{:href => "http://twitter.com/other_criteria"} @other_criteria
+                    Great crowd to support
+                    %a.twitter-user{:href => "http://twitter.com/UAPNYC"} @UAPNYC
+                    this evening
+                    %a.twitter-hashtag{:href => "http://twitter.com/search?q=%23thankyou"} #thankyou
+                    %a{:href => "http://t.co/pW1fSu32C8"} http://t.co/pW1fSu32C8
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568238294128963584"} 09:39:01 PM February 18, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568238294128963584", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568238294128963584", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568238294128963584", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    RT
+                    = succeed ":" do
+                      %a.twitter-user{:href => "http://twitter.com/other_criteria"} @other_criteria
+                    We're glad to be hosting the
+                    %a.twitter-user{:href => "http://twitter.com/UAPNYC"} @UAPNYC
+                    young professionals this evening !
+                    %a{:href => "http://t.co/9wcJymbTFe"} http://t.co/9wcJymbTFe
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568238205973057536"} 09:38:40 PM February 18, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com/download/iphone", :rel => "nofollow"} Twitter for iPhone
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568238205973057536", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568238205973057536", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568238205973057536", :title => "Favorite"} Favorite
+                %li
+                  %span.entry-content
+                    Fresh Prep students from FLAGS &amp; HSEI went to
+                    %a.twitter-hashtag{:href => "http://twitter.com/search?q=%23wildnout"} #wildnout
+                    taping yesterday as a reward for passing their regents exams!
+                    %a{:href => "http://t.co/4hWanK4AHv"} http://t.co/4hWanK4AHv
+                  %span.entry-meta
+                    %span.time-meta
+                      %a{:href => "http://twitter.com/UAPNYC/statuses/568065508727255040"} 10:12:26 AM February 18, 2015
+                    %span.from-meta
+                      from
+                      %a{:href => "http://twitter.com", :rel => "nofollow"} Twitter Web Client
+                  %span.intent-meta
+                    %a.in-reply-to{"data-lang" => "en", :href => "http://twitter.com/intent/tweet?in_reply_to=568065508727255040", :title => "Reply"} Reply
+                    %a.retweet{"data-lang" => "en", :href => "http://twitter.com/intent/retweet?tweet_id=568065508727255040", :title => "Retweet"} Retweet
+                    %a.favorite{"data-lang" => "en", :href => "http://twitter.com/intent/favorite?tweet_id=568065508727255040", :title => "Favorite"} Favorite
+              .follow-button
+                %a.twitter-follow-button{"data-lang" => "en", :href => "http://twitter.com/UAPNYC", :title => "Follow @UAPNYC"} @UAPNYC
+    %section#latest-news-block.homepage-block
+      %hgroup
+        %h5 Latest News
+      #padded-row.row
+        .small-3.columns
+          %article
+            %a{:href => "http://www.urbanarts.org/come-check-us-out-at-sxswedu/"}
+              .thumb-box
+                .thumb-image-box
+                  .thumb-image.fadeIn{:style => "background-image:url(http://www.urbanarts.org/wp-content/uploads/2015/02/SXSWedu15_primary_date_city_72dpi_COLOR_WEB.jpg);"}
+            %hgroup.header
+              %h4
+                %a{:href => "http://www.urbanarts.org/come-check-us-out-at-sxswedu/"} Come Check Us Out at SXSWEdu!
+              %h6.date February 12, 2015
+        .small-3.columns
+          %article
+            %a{:href => "http://www.urbanarts.org/self-portraits-and-i-am-poems-at-ps306/"}
+              .thumb-box
+                .thumb-image-box
+                  .thumb-image.fadeIn{:style => "background-image:url(http://www.urbanarts.org/wp-content/uploads/2015/02/jk-ss-3.jpg);"}
+            %hgroup.header
+              %h4
+                %a{:href => "http://www.urbanarts.org/self-portraits-and-i-am-poems-at-ps306/"} Self Portraits and “I Am” Poems at PS306
+              %h6.date February 4, 2015
+        .small-3.columns
+          %article
+            %a{:href => "http://www.urbanarts.org/student-engagement-leads-to-teacher-transformation/"}
+              .thumb-box
+                .thumb-image-box
+                  .thumb-image.fadeIn{:style => "background-image:url(http://www.urbanarts.org/wp-content/uploads/2015/02/JM-SS-1.jpg);"}
+            %hgroup.header
+              %h4
+                %a{:href => "http://www.urbanarts.org/student-engagement-leads-to-teacher-transformation/"} Student Engagement Leads to Teacher Transformation
+              %h6.date February 3, 2015
+        .small-3.columns
+          %article
+            %a{:href => "http://www.urbanarts.org/desert-ocean-wetland-forest-and-tundra/"}
+              .thumb-box
+                .thumb-image-box
+                  .thumb-image.fadeIn{:style => "background-image:url(http://www.urbanarts.org/wp-content/uploads/2015/01/Big-Sprout.jpg);"}
+            %hgroup.header
+              %h4
+                %a{:href => "http://www.urbanarts.org/desert-ocean-wetland-forest-and-tundra/"} Desert, Ocean, Wetland, Forest and Tundra!
+              %h6.date January 28, 2015
+    %section#featured-funders.homepage-block
+      %hgroup
+        %h5 Our Partners
+      #padded-row.row
+        #funders-slider.flexslider
+          %ul.slides
+            %li
+              %a{:href => "http://www.tigerfoundation.org/index.php?/", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/Untitled-2.jpg"}/
+            %li
+              %a{:href => "http://www.robinhood.org/", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/Unknown.jpeg"}/
+            %li
+              %a{:href => "http://www.montblanc.com", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/Montblanc-logo.gif"}/
+            %li
+              %a{:href => "http://www.adobe.com/corporate-responsibility/community.html", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/adobe-foundation1.jpg"}/
+            %li
+              %a{:href => "http://arts.gov/", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/NEA_LogoColor.jpg"}/
+            %li
+              %a{:href => "http://www.heckscherfoundation.org/index.html", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/heckscher_logo.jpg"}/
+            %li
+              %a{:href => "http://www.citiprivatepass.com/", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/citi.jpg"}/
+            %li
+              %a{:href => "http://www.nysca.org", :target => "_blank"}
+                %img.funder-logo.fadeIn{:src => "http://www.urbanarts.org/wp-content/uploads/2013/06/nysca_logo.jpg"}/
+  %footer
+    .row
+      .small-2.columns.two
+        %address
+          %img.footer-logo{:src => "/wp-content/themes/urbanarts/img/uap_logo.png"}
+            %p
+              21 Howard St, 5th Fl
+              %br/
+              New York, NY 10013
+              %br/
+              Email:
+              %a{:href => "/cdn-cgi/l/email-protection#6900070f06291c1b0b0807081b1d1a47061b0e"}
+                %span.__cf_email__{"data-cfemail" => "5d34333b321d282f3f3c333c2f292e73322f3a"} [email protected]
+              %br/
+              Phone: 212-966-5881
+              %br/
+              Fax: 212-966-5911
+      .small-6.small-offset-1.offset-by-one.columns.six
+        .mailing-list-box
+          %h2.please Join Our Mailing List
+          %form.form-search{:action => "http://visitor.r20.constantcontact.com/d.jsp"}
+            %input{:name => "llr", :type => "hidden", :value => "krbka7dab"}
+              %input{:name => "m", :type => "hidden", :value => "1103672706602"}
+                %input{:name => "p", :type => "hidden", :value => "oi"}
+                  %input.search-query{:name => "ea", :type => "email"}
+                    %button.btn{:type => "submit"} Submit
+        %p.copyright
+          All Content is ©2013 Urban Arts Partnership. All Rights Reserved.
+          %span
+            %a{:href => "/privacy-terms/"} Privacy & Terms
+        %p.terms
+          Site by
+          %a{:href => "http://familiar-studio.com"} Familiar
+      .small-2.small-offset-1.offset-by-one.columns.two
+        .menu-main-menu-container
+          %ul#menu-main-menu-1.top-bar-section
+            %li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-104
+              %a{:href => "http://www.urbanarts.org/students/"} Students
+            %li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-103
+              %a{:href => "http://www.urbanarts.org/educators/"} Educators
+            %li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-102
+              %a{:href => "http://www.urbanarts.org/programs/"} Programs
+            %li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-455
+              %a{:href => "http://www.urbanarts.org/impact-page/"} Impact
+            %li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1461
+              %a{:href => "http://www.urbanarts.org/news-events/"} News & Events
+            %li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-4937
+              %a{:href => "http://www.urbanarts.org/about/"} About Us
+        .menu-utility-navigation-container
+          %ul#menu-utility-navigation.top-bar-section
+            %li#menu-item-186.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-186
+              %a{:href => "http://www.urbanarts.org/partners/"} Partners
+            %li#menu-item-459.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-459
+              %a{:href => "https://app.mobilecause.com/public/campaigns_keywords/14353/donations/new"} Donate Now
+            %li#menu-item-4949.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-4949
+              %a{:href => "http://www.urbanarts.org/tag/job-posting/"} Careers
+  %script{:src => "/wp-content/themes/urbanarts/javascripts/jquery.color.js", :type => "text/javascript"}
     =yield
 
 
