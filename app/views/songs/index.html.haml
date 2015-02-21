@@ -1,0 +1,6 @@
+%h1
+  Fresh Prep Songs
+%ul
+  -@songs.each do |song|
+    %li
+      = link_to song.title, song 

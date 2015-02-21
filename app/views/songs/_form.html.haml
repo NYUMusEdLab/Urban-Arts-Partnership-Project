@@ -1,0 +1,8 @@
+= form_for(@song) do |f|
+  = f.label :title
+  = f.text_field :title
+  %br
+  = fields_for :lyrics do |l|
+    = l.label :content, "lyrics conent"
+    = l.text_area :content
+  = f.submit
