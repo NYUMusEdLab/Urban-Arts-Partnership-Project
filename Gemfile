@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'paperclip'
 gem 'pg'
 gem 'rspec-rails'
 gem 'haml'
