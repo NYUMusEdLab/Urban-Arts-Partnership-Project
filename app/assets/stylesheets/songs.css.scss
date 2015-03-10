@@ -24,14 +24,22 @@
     cursor:pointer;
   }
 }
-.keyword-card{
+.keyword-wrapper{
+  width:600px;
+  border:1px solid black;
+  top: 300px;
+  height:600px;
   position:fixed;
+  margin-left: 500px;
+}
+.keyword-card{
   display:none;
   width:400px;
-  top: 300px;
-  margin-left: 500px;
   border:1px solid black;
   z-index: 99999;
-
-
+  margin:auto;
+  li{
+  list-style:none;
+  
+  }
 }
