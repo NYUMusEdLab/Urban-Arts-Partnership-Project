@@ -1,4 +1,4 @@
-%h1{data: {songId:@song.id}} 
+%h1{class:"song-title",data: {songId:@song.id}} 
   = @song.title
 %p{class:"lyrics",style:"white-space: pre;"}
   = @song.lyrics.first.content

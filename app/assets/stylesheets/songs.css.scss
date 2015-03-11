@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.song-title{
+  width:75%;
+  float:left;
+  margin-left: 100px;
+  background:white;
+}
 
 .lyrics{
   width:75%;
@@ -12,8 +18,6 @@
 
 .keyword-name{
 font-weight:bold;
-
-
 }
 
 .information{
