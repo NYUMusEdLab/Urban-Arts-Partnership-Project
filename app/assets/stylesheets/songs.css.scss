@@ -9,6 +9,13 @@
   background:white;
 }
 
+.song-info{
+ position:fixed;
+ height:100%;
+ background:green;
+ width:500px;
+ right:0;
+}
 .lyrics{
   width:75%;
   float:left;
@@ -49,9 +56,8 @@ font-weight:bold;
   width:400px;
   border:1px solid black;
   margin-top:200px;
-  margin-left:auto;
-  margin-right:auto;
-  right:100px;
+  margin-left:50px;
+  background:white;
   li{
   list-style:none;
   }

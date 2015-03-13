@@ -2,21 +2,22 @@
   = @song.title
 %p{class:"lyrics",style:"white-space: pre;"}
   = @song.lyrics.first.content
-.keywords
-  -@song.keywords.each_with_index do |keyword,index|
-    .keyword-card{:data=>{keywordid:index,paramid: keyword.id }}
-      .keyword-name
-        = "#{keyword.name} (#{keyword.word_class})"
-      .keyword-description
-        = keyword.definition
-      .keyword-comments
-        = form_for @comment do |f|
-          = f.text_field :content
-          = f.submit :class => "comment-submit"
-      %ul
-        - keyword.comments.each do |comment|
-          %li{class:"comment-content"}
-            = comment.content
+.song-info
+  .keywords
+    -@song.keywords.each_with_index do |keyword,index|
+      .keyword-card{:data=>{keywordid:index,paramid: keyword.id }}
+        .keyword-name
+          = "#{keyword.name} (#{keyword.word_class})"
+        .keyword-description
+          = keyword.definition
+        .keyword-comments
+          = form_for @comment do |f|
+            = f.text_field :content
+            = f.submit :class => "comment-submit"
+        %ul
+          - keyword.comments.each do |comment|
+            %li{class:"comment-content"}
+              = comment.content
 
 :javascript
   "#{j @song.keywords.map{|x| x.name }.to_s}"
