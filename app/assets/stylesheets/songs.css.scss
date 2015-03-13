@@ -1,5 +1,5 @@
 // Place all the styles related to the Songs controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.c
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .song-title{
@@ -43,13 +43,6 @@ font-weight:bold;
     cursor:pointer;
   }
 }
-.keyword-wrapper{
-  width:600px;
-  border:1px solid black;
-  top: 0px;
-  height:100%;
-  right: 0px;
-}
 .keyword-card{
   position:fixed;
   display:none;
@@ -64,9 +57,6 @@ font-weight:bold;
 .comment-content{
  margin-left:10px;
 }
-.keywords{
-background:black;
-height:300px;
-width:300px;
-}
+
+
 }
