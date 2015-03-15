@@ -51,15 +51,21 @@ font-weight:bold;
   margin-top:200px;
   margin-left:50px;
   background:white;
+  height:400px;
   li{
   list-style:none;
   }
   form{
-    width:100px;
-  
+    margin-top:50px;
+    width:200px;
+    text-align:center; 
+    margin:auto;
   }
 .comment-content{
  margin-left:10px;
+ border:1px black solid;
+ margin-top:10px;
+ width:380px;
 }
 
 
