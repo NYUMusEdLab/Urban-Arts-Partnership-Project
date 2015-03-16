@@ -4,3 +4,7 @@
   -@songs.each do |song|
     %li
       = link_to song.title, song 
+=form_for @user do |f|
+  =f.text_field :password
+  =f.submit
+= link_to 'Log In', "login"
