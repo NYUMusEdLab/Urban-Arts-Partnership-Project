@@ -15,10 +15,11 @@
             = form_for @comment do |f|
               = f.text_field :content
               = f.submit :class => "comment-submit"
-          %ul
-            - keyword.comments.each do |comment|
-              %li{class:"comment-content"}
-                = comment.content
+          .comment-section
+            %ul
+              - keyword.comments.each do |comment|
+                %li{class:"comment-content"}
+                  = comment.content
 
 :javascript
   "#{j @song.keywords.map{|x| x.name }.to_s}"

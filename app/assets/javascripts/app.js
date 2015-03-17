@@ -36,7 +36,7 @@ $(document).ready(function(){
       data: commentInfo,
       success: function(){
         $(this).parent().find("#comment_content").val(""); 
-        $(this).closest(".keyword-card").find("ul").append("<li>"+comment+"</li>")
+        $(this).closest(".keyword-card").find("ul").append("<li class='comment-content'>"+comment+"</li>")
       },
       error: function(){
         alert("Cannot connect to the server.")
