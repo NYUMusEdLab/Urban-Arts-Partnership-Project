@@ -1,4 +1,13 @@
 $(document).ready(function(){
+  
+  $('#sign-up-button').on("click",function(){
+    $('.signup').css("display","block")
+    $('.signin').css("display","none")
+  })
+  $('#sign-in-button').on("click",function(){
+    $('.signin').css("display","block")
+    $('.signup').css("display","none")
+  })
 
   $('body').on("click",".keyword",function(){
     console.log($(this).data().keywordid)
