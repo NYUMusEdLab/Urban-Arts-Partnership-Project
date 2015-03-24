@@ -12,7 +12,7 @@
 .song-info{
  position:fixed;
  height:100%;
- background:green;
+ background:black;
  width:500px;
  right:0;
 }
@@ -74,4 +74,16 @@ font-weight:bold;
   height: 250px;
   overflow-y: scroll;
 }
-
+.comment-user-name{
+  display:inline-block;
+  font-weight:bold;
+}
+.comment-user-image{
+  display:inline-block;
+}
+.comment-text{
+  display:bock;
+}
+.comment-user{
+  border: 1px solid black;
+}
