@@ -31,6 +31,7 @@ $(document).ready(function(){
 
 
 
+  console.log("test")
   $(".comment-submit").on("click",function(e){
     e.preventDefault()
     var $this = $(this)
