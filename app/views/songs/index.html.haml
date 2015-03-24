@@ -4,10 +4,23 @@
   -@songs.each do |song|
     %li
       = link_to song.title, song 
-=form_for @user do |f|
-  =f.text_field :name 
-  =f.text_field :email
-  =f.text_field :password
-  =f.text_field :password_confirmation
-  =f.submit
-= link_to 'Log In', "login"
+.signup
+  =form_for @user do |f|
+    =f.label :name
+    =f.text_field :name 
+    =f.label :email
+    =f.text_field :email
+    =f.label :password
+    =f.text_field :password
+    =f.label :password_confirmation
+    =f.text_field :password_confirmation
+    =f.submit
+  -#= link_to 'Log In', "login"
+
+.signin
+  =form_for @user, :url => { :action =>"create", :method => :post, controller: "sessions" } do |f|
+    =f.label :email
+    =f.text_field :email 
+    =f.label :password
+    =f.text_field :password
+    =f.submit
