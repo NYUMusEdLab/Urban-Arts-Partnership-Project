@@ -46,7 +46,7 @@ $(document).ready(function(){
       data: commentInfo,
       success: function(){
         $(this).parent().find("#comment_content").val(""); 
-        $(this).closest(".keyword-card").find("ul").append("<li class='comment-content'>"+comment+"</li>")
+        $(this).closest(".keyword-card").find("ul").append("<li class='comment-content'> <div class='comment-user'><div class='comment-user-image' style='width:50px'> <img src='https://pbs.twimg.com/media/BzjFf1RIYAAZ-iS.jpg:large'></div><div class='comment-user-name'>" + comment  + "</div></div><div class='comment-text'>sdfsf</div></li>")
       },
       error: function(){
         alert("Cannot connect to the server.")
