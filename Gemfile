@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'paperclip'
+gem 'backbone-on-rails'
 gem 'pg'
 gem 'rspec-rails'
 gem 'haml'
