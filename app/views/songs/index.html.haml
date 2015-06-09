@@ -1,29 +1,16 @@
-%h1
-  Fresh Prep Songs World History
-%ul
-  -@songs.each do |song|
-    %li
-      = link_to song.title, song 
-%button#sign-up-button
-  Sign Up
-.signup.login-form
-  =form_for @user do |f|
-    =f.label :name
-    =f.text_field :name 
-    =f.label :email
-    =f.text_field :email
-    =f.label :password
-    =f.text_field :password
-    =f.label :password_confirmation
-    =f.text_field :password_confirmation
-    =f.submit "Sign Up"
-  -#= link_to 'Log In', "login"
-%button#sign-in-button
-  Sign In
-.signin.login-form
-  =form_for @user, :url => { :action =>"create", :method => :post, controller: "sessions" } do |f|
-    =f.label :email
-    =f.text_field :email 
-    =f.label :password
-    =f.text_field :password
-    =f.submit "Sign In"
+.hero-image
+.hero-copy
+  %h2
+    SELECT A SONG FROM ONE OF THE THREE TOPICS AND START ANNOTATING!
+%section.topic-selector
+  %h1
+    TOPICS
+  .topic-dropdowns
+    .song-dropdown
+      %select
+        -@songs.each do |song|
+          %option
+            = link_to song.title, song 
+    .class-dropdown
+    .strategy-dropdown
+

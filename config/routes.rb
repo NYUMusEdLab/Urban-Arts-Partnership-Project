@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
 
-
+  get '/'      => 'songs#index' 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

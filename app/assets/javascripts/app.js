@@ -10,14 +10,12 @@ $(document).ready(function(){
   })
 
   $('body').on("click",".keyword",function(){
-    console.log($(this).data().keywordid)
-
     $('.keyword-card').hide();
     var keywordData = $(this).data().keywordid
     $('.keyword-card').filter('[data-keywordid=' + keywordData + ']').fadeIn()
     
   })
-  // $('.keyword-cards').html($('.keyword-cards').html().replace("'\'+'92'","'"))
+
   $('p').html($('p').html().replace("Mesopatamia","Mesopotamia"))
   var keywords = $.parseJSON($('script').last().html()).replace('["',"").replace('"]',"").split('", "')
   keywords.forEach(function(value,index){
@@ -31,7 +29,6 @@ $(document).ready(function(){
 
 
 
-  console.log("test")
   $(".comment-submit").on("click",function(e){
     e.preventDefault()
     var $this = $(this)

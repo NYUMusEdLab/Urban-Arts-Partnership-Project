@@ -23,6 +23,8 @@ class SongsController < ApplicationController
   end
 
   def show
+    @user = User.new
+
     @comment = Comment.new
   end
 

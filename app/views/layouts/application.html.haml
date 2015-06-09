@@ -7,4 +7,37 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true 
     = csrf_meta_tags
   %body.home
-  =yield
+  %header
+    .header-image  
+      = image_tag 'Fresh-Prep-Rap-Genius-Notebook-Header.jpg'  
+    .fresh-prep-logo
+      = image_tag 'fresh-prep-logo.png'
+    .header-login
+      %button#sign-up-button
+        Sign Up
+      .signup.login-form
+        =form_for @user do |f|
+          =f.label :name
+          =f.text_field :name 
+          =f.label :email
+          =f.text_field :email
+          =f.label :password
+          =f.text_field :password
+          =f.label :password_confirmation
+          =f.text_field :password_confirmation
+          =f.submit "Sign Up"
+      %button#sign-in-button
+        Sign In
+      .signin.login-form
+        =form_for @user, :url => { :action =>"create", :method => :post, controller: "sessions" } do |f|
+          =f.label :email
+          =f.text_field :email 
+          =f.label :password
+          =f.text_field :password
+          =f.submit "Sign In"
+    .page-title
+      %h1
+        ANNOTATOR
+  = yield
+  = render "/layouts/footer"
+

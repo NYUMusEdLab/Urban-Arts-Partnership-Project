@@ -1,7 +1,8 @@
 %h1{class:"song-title",data: {songId:@song.id}} 
   = @song.title
-%p{class:"lyrics",style:"white-space: pre;"}
-  = @song.lyrics.first.content
+.song-show
+  %p{class:"lyrics",style:"white-space: pre;"}
+    = @song.lyrics.first.content
 .song-info
   .keywords
     -@song.keywords.each_with_index do |keyword,index|
