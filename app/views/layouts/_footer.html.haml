@@ -1,10 +1,30 @@
 %footer
   .row
-    .small-4
+    .small-4.columns.two
       %img.footer-logo{:src => "http://www.urbanarts.org/wp-content/themes/urbanarts/img/uap_logo.png"}
-    .small-4
-      %p
-        Urban Arts Partnership advances the intellectual, social and artistic development of underserved public school students through arts-integrated education programs to close the achievemnt gap.
-    .small-4
-      %p 
-        ksdfj
+        %address
+          %p
+            21 Howard St, 5th Fl
+            %br
+            New York, NY 10013
+            %br
+            Email:
+            %a{:href => "/cdn-cgi/l/email-protection#620b0c040d22171000030c031016114c0d1005"}
+            %br
+            Phone: 212-966-5881
+            %br
+            Fax: 212-966-5911
+    .small-4.columns.six
+      .footer-description
+        %p
+          Urban Arts Partnership advances the intellectual social and artistic development of underserved public school students through arts-integrated education programs to close the achievement gap.
+    .small-4.columns
+      .social-share-buttons
+        %a{:href => "https://plus.google.com/+UrbanartsOrg", :target => "_blank"}
+          = image_tag "google-pluse.png",{class: "social-icon.google-plus"}
+        %a{:href => "https://www.facebook.com/urbanartspartnership", :target => "_blank"}
+          =image_tag "facebook.png", {class: "social-icon.facebook"}   
+        %a{:href => "https://twitter.com/UAPNYC", :target => "_blank"}
+          =image_tag "twitter.png", {class: "social-icon.facebook"}  
+        %a{:href => "https://vimeo.com/urbanarts/videos", :target => "_blank"}
+          =image_tag "vimeo.png", {class: "social-icon.facebook"}  

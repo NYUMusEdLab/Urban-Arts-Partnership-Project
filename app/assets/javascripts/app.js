@@ -1,5 +1,13 @@
 $(document).ready(function(){
   
+
+  $('select').eq(0).on("change",function(){
+    var slugSongName = $(this).val().replace(" ", "-")
+    window.location.href= "/songs/" + slugSongName
+
+  })
+
+
   $('#sign-up-button').on("click",function(){
     $('.signup').css("display","block")
     $('.signin').css("display","none")
@@ -10,17 +18,18 @@ $(document).ready(function(){
   })
 
   $('body').on("click",".keyword",function(){
+    console.log($(this).data().keywordid)
+
     $('.keyword-card').hide();
     var keywordData = $(this).data().keywordid
     $('.keyword-card').filter('[data-keywordid=' + keywordData + ']').fadeIn()
     
   })
-
-  $('p').html($('p').html().replace("Mesopatamia","Mesopotamia"))
+  // $('.keyword-cards').html($('.keyword-cards').html().replace("'\'+'92'","'"))
   var keywords = $.parseJSON($('script').last().html()).replace('["',"").replace('"]',"").split('", "')
   keywords.forEach(function(value,index){
-       $('p').html($('p').html().replace(value,"<span class='keyword' data-keywordid=" + index + "> "+value+" </span>"))
-       $('p').html($('p').html().replace(value.toLowerCase(),"<span class='keyword' data-keywordid=" + index + "> "+value.toLowerCase()+" </span>"))
+       $('.lyrics').html($('.lyrics').html().replace(value,"<span class='keyword' data-keywordid=" + index + "> "+value+" </span>"))
+       $('.lyrics').html($('.lyrics').html().replace(value.toLowerCase(),"<span class='keyword' data-keywordid=" + index + "> "+value.toLowerCase()+" </span>"))
   })
   
   $('p').not(".keyword").on("click",function(){

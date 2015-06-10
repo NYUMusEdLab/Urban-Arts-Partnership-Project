@@ -1,6 +1,65 @@
 // Place all the styles related to the Songs controller here.
 // They will automatically be included in application.c
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+address{
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+.social-share-buttons{
+  width: 95px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.footer-description{
+    p{
+        margin-top: 50px;
+    }
+}
+
+.topic-copy, h1{
+    display: inline-block;
+}
+
+.topic-dropdowns{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.song-dropdown{
+    margin-left: 20px;
+    display: inline-block;
+    & select{
+        background: black;
+        color: white;
+        width: 300px;
+    }
+}
+
+.strategy-dropdown{
+    margin-left: 20px;
+    display: inline-block;
+    & select{
+        background: #db533f;
+        color: white;
+        width: 300px;
+    }
+}
+
+.class-dropdown{
+    margin-left: 20px;
+    display: inline-block;
+    & select{
+        background: #78c4db;
+        color: white;
+        width: 300px;
+    }
+}
 
 .fresh-prep-logo img{
   width:350px;

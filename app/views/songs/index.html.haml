@@ -3,14 +3,23 @@
   %h2
     SELECT A SONG FROM ONE OF THE THREE TOPICS AND START ANNOTATING!
 %section.topic-selector
-  %h1
+  %h1.topic-copy
     TOPICS
-  .topic-dropdowns
+  %form.topic-dropdowns
     .song-dropdown
       %select
+        %option
+          SONGS
         -@songs.each do |song|
           %option
             = link_to song.title, song 
     .class-dropdown
+      %select
+        %option
+          U.S. HISTORY
     .strategy-dropdown
+      %select
+        %option
+          ELA/STRATEGY
+
 

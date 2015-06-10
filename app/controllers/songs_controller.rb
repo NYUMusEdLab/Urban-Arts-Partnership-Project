@@ -31,7 +31,7 @@ class SongsController < ApplicationController
   private
 
   def set_song
-    @song = Song.find(params[:id])
+    @song = Song.find_by(title: params[:id].gsub("-"," "))
   end 
 
   def song_params
