@@ -2,9 +2,10 @@ $(document).ready(function(){
   
 
   $('select').eq(0).on("change",function(){
-    var slugSongName = $(this).val().replace(" ", "-")
-    window.location.href= "/songs/" + slugSongName
-
+    if($(this).val() !== "SONGS"){
+      var slugSongName = $(this).val().replace(" ", "-")
+      window.location.href= "/songs/" + slugSongName
+    }
   })
 
 
