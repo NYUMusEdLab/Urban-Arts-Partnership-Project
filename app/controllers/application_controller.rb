@@ -10,5 +10,11 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to '/login' unless current_user
   end
+
+  def logged_in?
+    !!current_user
+  end
+  helper_method :logged_in?
+  
   
 end

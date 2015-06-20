@@ -42,6 +42,7 @@ $(document).ready(function(){
   $(".comment-submit").on("click",function(e){
     e.preventDefault()
     var $this = $(this)
+    var userName = $('#current-user').data().username
     var songId = $('h1').eq(0).data().songId
     var comment = $(this).parent().find("#comment_content").val();
     var keywordId = $(".comment-submit").eq(1).closest(".keyword-card").data().paramid
@@ -53,7 +54,7 @@ $(document).ready(function(){
       data: commentInfo,
       success: function(){
         $(this).parent().find("#comment_content").val(""); 
-        $(this).closest(".keyword-card").find("ul").append("<li class='comment-content'> <div class='comment-user'><div class='comment-user-image' style='width:50px'> <img src='https://pbs.twimg.com/media/BzjFf1RIYAAZ-iS.jpg:large'></div><div class='comment-user-name'>" + comment  + "</div></div><div class='comment-text'>sdfsf</div></li>")
+        $(this).closest(".keyword-card").find("ul").append("<li class='comment-content'> <div class='comment-user'><div class='comment-user-image' style='width:50px'> <img style='width:50px'src='https://addons.cdn.mozilla.net/static//img/zamboni/anon_user.png'></div><div class='comment-user-name'>" + userName  + "</div></div><div class='comment-text'>"+ comment+"</div></li>")
       },
       error: function(){
         alert("Cannot connect to the server.")

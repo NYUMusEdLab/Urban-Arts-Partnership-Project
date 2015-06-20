@@ -10,27 +10,28 @@
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "220", :mozallowfullscreen => "", :src => "#{@song.video_url}", :webkitallowfullscreen => "", :width => "500", style: "margin-left: -40px"}
       -@song.keywords.each_with_index do |keyword,index|
         .song-card
-
           .keyword-card{:data=>{keywordid:index,paramid: keyword.id }}
             .keyword-name
               = "#{keyword.name} (#{keyword.word_class})"
             .keyword-description
               = keyword.definition
-            .keyword-comments
-              = form_for @comment do |f|
-                = f.text_field :content
-                = f.submit :class => "comment-submit"
-            .comment-section
-              %ul
-                - keyword.comments.each do |comment|
-                  %li{class:"comment-content"}
-                    -#.comment-user
-                      -#.comment-user-image{style:"width:50px"}
-                        -#%img{ src: "#{User.find(comment.user_id).image_url}"}
-                      -#.comment-user-name
-                        -#= User.find(comment.user_id).name
-                    -#.comment-text
-                      -#= comment.content
+            - if logged_in?
+              #current-user{:data=>{userName: current_user.name}, style:"display:none;"}
+              .keyword-comments
+                = form_for @comment do |f|
+                  = f.text_field :content
+                  = f.submit :class => "comment-submit"
+              .comment-section
+                %ul
+                  - keyword.comments.each do |comment|
+                    %li{class:"comment-content"}
+                      .comment-user
+                        .comment-user-image{style:"width:50px"}
+                          %img{ src: "https://addons.cdn.mozilla.net/static//img/zamboni/anon_user.png",style:"width: 50px"}
+                        .comment-user-name
+                          = User.find(comment.user_id).name
+                      .comment-text
+                        = comment.content
 
 :javascript
   "#{j @song.keywords.map{|x| x.name }.to_s}"
