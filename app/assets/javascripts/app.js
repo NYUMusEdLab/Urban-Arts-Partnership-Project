@@ -1,13 +1,11 @@
 $(document).ready(function(){
   
-
   $('select').eq(0).on("change",function(){
     if($(this).val() !== "SONGS"){
       var slugSongName = $(this).val().replace(" ", "-")
       window.location.href= "/songs/" + slugSongName
     }
   })
-
 
   $('#sign-up-button').on("click",function(){
     $('.signup').css("display","block")
@@ -45,8 +43,9 @@ $(document).ready(function(){
     var userName = $('#current-user').data().username
     var songId = $('h1').eq(0).data().songId
     var comment = $(this).parent().find("#comment_content").val();
-    var keywordId = $(".comment-submit").eq(1).closest(".keyword-card").data().paramid
+    var keywordId = $(this).closest(".keyword-card").data().paramid
     var commentInfo = {comment_content: comment, keyword_id: keywordId, song_id: songId}
+    console.log(keywordId)
     $.ajax({
       type:"POST",
       url:'/comments',
