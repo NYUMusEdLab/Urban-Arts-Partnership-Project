@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def create
-    keyword = Keyword.find(keyword_id.to_i + 1)
+    keyword = Keyword.find(keyword_id)
     comment = keyword.comments.create(content:comment_content)
     comment.update(user_id: current_user.id)
     render nothing:true

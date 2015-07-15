@@ -8,7 +8,7 @@
   %form.topic-dropdowns
     .song-dropdown
       %select
-        %option
+        %option{disabled: true, selected: true}
           SONGS
         -@songs.each do |song|
           %option
@@ -21,5 +21,6 @@
       %select
         %option
           ELA/STRATEGY
+= render "/layouts/footer"
 
 
